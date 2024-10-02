@@ -1,0 +1,40 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+class Person{
+    public : 
+      string name ;
+      int age;
+      
+      void DisplayDetail(){
+        cout<< "name : "<< name <<endl<< "Age : "<< age <<endl;
+      }
+      
+ 
+  }  ;  
+
+ int main(){
+      Person person1;
+      person1.name = "DAANES";
+      person1.age = 23;
+      
+      Person person2;
+      person2.name = "GOKU";
+      person2.age = 22;
+      
+      Person person3;
+      person3.name = "VAISHU";
+      person3.age = 18;
+      
+      Person person4;
+      person4.name = "GIRUBA";
+      person4.age = 12;
+      
+      person1.DisplayDetail();
+      person2.DisplayDetail();
+      person3.DisplayDetail();
+      person4.DisplayDetail();
+      
+      return 0;
+ }
