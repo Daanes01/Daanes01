@@ -1,0 +1,32 @@
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Animal{
+    public: 
+    string name;
+    string species;
+    int age;
+    
+    Animal(string a , string b , int c){
+        name = a; 
+        species = b;
+        age = c;
+    }
+    
+    void displayInfo(){
+        cout<< "Name of the animal : "<< name << endl<<"Species : "<< species<< endl<< "Age (month) : "<< age<<endl;
+    }
+};
+int main(){
+    
+    Animal animal1 ("Tiger" , "mamal" , 13);
+    Animal animal2 ("shark" , "fish" , 15 );
+    Animal animal3 ("snake" , "reptile" , 10);
+    
+    animal1.displayInfo();
+    animal2.displayInfo();
+    animal3.displayInfo();
+    
+    return 0;
+}
