@@ -1,0 +1,36 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+class Car{
+    public:
+    string brand;
+    string model;
+    int year;
+    
+    Car(string a , string b, int c){
+        brand = a;
+        model = b;
+        year = c;
+        
+       
+    }
+    void displayInfo(){
+        cout<< "Brand : "<< brand << endl;
+        cout<< "Model : "<< model << endl;
+        cout<< "Year : "<< year << endl;
+    }
+    
+};
+
+int main(){
+    
+    Car car1("Proton", "x50", 2020); 
+    Car car2("perodua", "myvi" , 2021);
+    Car car3("toyota" , "gr86" , 2022);
+    
+    car1.displayInfo();
+    car2.displayInfo();
+    car3.displayInfo();
+    
+}
