@@ -39,44 +39,40 @@ int main() {
     double gearRatioTorque = RobotArmTorque / MotorTorque; //formula for gear torque
     double overallGearRatio = gearRatioSpeed * gearRatioTorque;//formula for overall gear ratio
 
-
-
-
-    // saya code sampai sini saja.............................sambung edit code ke bawah
-    
-
-
-
-    // Display calculated gear ratios
+  
+    // For gear ratio from the calculation
     cout << "\nRecommended Gear Ratios:" << endl;
     cout << "Speed Gear Ratio: " << gearRatioSpeed << endl;
     cout << "Torque Gear Ratio: " << gearRatioTorque << endl;
     cout << "Overall Gear Ratio: " << overallGearRatio << endl;
 
-    // Checking the overall gear ratio for excessive gearing
-    if (overallGearRatio > 10.0) {
-        cout << "Warning: The overall gear ratio is high and may lead to excessive gearing. Consider adjusting design parameters." << endl;
+    // give warning when gear ratio >= 10
+    if (overallGearRatio >= 10.0) {
+        cout << "WARNING....Too much gear ratio.Set within the limit for safety purpose" << endl;
     }
 
-    // Display motor specifications summary
+    // checking motor status
     cout << "\nMotor Specifications:" << endl;
     cout << "Motor Speed: " << MotorSpeed << " RPM" << endl;
     cout << "Motor Torque: " << MotorTorque << " Nm" << endl;
 
+
+
     // Suggesting gear sizes based on gear ratio
-    cout << "\nSuggested Gear Sizes:" << endl;
+    cout << "GEAR SIZE RECOMMENDATION :" << endl;
     if (overallGearRatio <= 2.0) {
-        cout << "For a 2:1 ratio, suggest 20 mm drive gear and 40 mm driven gear." << endl;
+        cout << "Recommend gear diameter of 20 mm for the drive gear and 40 mm for the driven gear." << endl;
     }
     else if (overallGearRatio <= 3.0) {
-        cout << "For a 3:1 ratio, suggest 30 mm drive gear and 90 mm driven gear." << endl;
+        cout << "Recommend gear diameter of 30 mm for the drive gear and 90 mm for the driven gear." << endl;
     }
     else {
-        double driveGearSize = 10 * overallGearRatio;  // scaling example
+        double driveGearSize = 10 * overallGearRatio;  
         double drivenGearSize = driveGearSize * overallGearRatio;
-        cout << "For a ratio greater than 3:1, suggest " << driveGearSize
-            << " mm drive gear and " << drivenGearSize << " mm driven gear." << endl;
+        cout << "For a ratio greater than 3:1, suggest " << driveGearSize<< " mm drive gear and " << drivenGearSize << " mm driven gear." << endl;
     }
+
+    //lessssgooooooooooooooooooooooooooooooo
 
     return 0;
 }
